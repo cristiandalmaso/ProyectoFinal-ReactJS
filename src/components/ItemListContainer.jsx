@@ -1,14 +1,14 @@
 import React from 'react'
 import itemListContainer from '../css/itemListContainer.css'
 
-const ItemListContainer = () => {
+const ItemListContainer = ({bienvenido}) => {
   return (
     <div className='container-items'>
       <div className='item'>Item 1</div>
       <div className='item'>Item 2</div>
       <div className='item'>Item 3</div>
       <div className='item'>Item 4</div>
-      <p id='usuario'>{"Bienvenido/a " +usuario}</p>
+      <p id='usuario'>{`${bienvenido} ${usuario}`}</p>
     </div>
   )
 }
