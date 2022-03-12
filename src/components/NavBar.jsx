@@ -2,29 +2,25 @@ import React from 'react'
 import logo from '../images/logo.png'
 import navBar from '../css/navBar.css'
 import CartWidget from './CartWidget.jsx';
-
+import Navbar  from "react-bootstrap/Navbar";
+import Nav  from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
 
 function NavBar() {
   return (
-    <header>
-      <navBar>
-        <div className="container-logo">
-          <div>
-          <img src={logo} className="logo-imagen"/> 
-          </div>
-        <div>
-        <h2><a href='../index.html' className='brand-titulo'>Hood FSH</a></h2>
-        </div>
-        </div>
-        <div className="container-categorias">
-        <p><a href='../index.html' className='categoria-clickeable'>Buzos</a></p>
-        <p><a href='../index.html' className='categoria-clickeable'>Camperas</a></p>
-        <p><a href='../index.html' className='categoria-clickeable'>Gorras</a></p>
-        <p><a href='../index.html' className='categoria-clickeable'>Sneakers</a></p>
-        </div>  
-        <CartWidget/>    
-      </navBar>
-    </header>
+    
+    <Navbar bg="dark" variant="dark">
+    <Container>
+    <Navbar.Brand href="#home"><img src={logo} className="logo-imagen"/><br></br>Hood FSH</Navbar.Brand>
+
+    <Nav className="me-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+    </Nav>
+    </Container>
+    <CartWidget/> 
+  </Navbar> 
   )
 }
 export default NavBar;
