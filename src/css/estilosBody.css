@@ -1,0 +1,13 @@
+.itemListContainer{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 1fr;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.item-individual{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
