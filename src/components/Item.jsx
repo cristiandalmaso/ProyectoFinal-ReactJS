@@ -2,11 +2,13 @@ import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import  Button  from "react-bootstrap/Button";
 import  Card  from "react-bootstrap/Card";
+import { Link } from 'react-router-dom';
 
 
 const Item = ({producto}) => {
   console.log(producto)
   return (
+    <Link to={`detalle/${producto.id}`} >
     <div className="item-individual">
         {<Card style={{ width: "auto"}}>
         <Card.Img variant="top" src={producto.imagen}/>
@@ -21,6 +23,7 @@ const Item = ({producto}) => {
         </Card.Body>
       </Card>}
     </div>
+    </Link>
   )
 }
 

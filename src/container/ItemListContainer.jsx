@@ -4,18 +4,28 @@ import {useState,useEffect} from 'react'
 import { getFetch } from "../helpers/gFetch.js";
 import ItemList from "../components/ItemList";
 import estilosBody from "../css/estilosBody.css"
+import { useParams } from "react-router-dom";
 
 
 const ItemListContainer = () => {
   const [loading, setLoading] = useState(true)
   const [productos, setProductos] = useState([])
+  const {id} = useParams
 
   useEffect(()=>{
-    getFetch
-    .then(resp=> setProductos(resp))
-    .catch(err=> console.log(err))
-    .finally(()=>setLoading(false))
-  },[])
+    if(id){
+      getFetch
+      .then(resp => setProductos(resp.filter(prod=>prod.categoria === id)))
+      .catch(err=> console.log(err))
+      .finally(()=>setLoading(false))
+    }
+    else{
+      getFetch
+      .then(resp=> setProductos(resp))
+      .catch(err=> console.log(err))
+      .finally(()=>setLoading(false))
+    }
+  },[id])
 
 
   console.log(productos)
