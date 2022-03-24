@@ -29,16 +29,3 @@ export const getFetch = new Promise((resolve, reject)=>{
     }
 })
 
-const producto = {id: 1, categoria: 'hoodies', nombre: "Gucci Lemon", precio: 18000, imagen: gucciLemon }
-
-export const getFetchOne = new Promise((resolve, reject)=>{
-    let condition = true
-    if (condition) {
-        setTimeout(() => {
-            resolve(producto)                    
-        }, 3000);
-    } else {
-        reject('400 - not found')        
-    }
-})
-

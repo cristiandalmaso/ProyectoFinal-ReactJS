@@ -6,3 +6,13 @@
     width: 8rem;
     height: 8rem;
 }
+
+.tituloCategoria{
+    color: whitesmoke;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+.tituloCategoria:hover{
+    color:rgb(250, 116, 62)
+}

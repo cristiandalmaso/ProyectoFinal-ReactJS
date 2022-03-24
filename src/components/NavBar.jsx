@@ -6,20 +6,21 @@ import Navbar  from "react-bootstrap/Navbar";
 import Nav  from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import {NavLink,Link} from 'react-router-dom' 
 
 function NavBar() {
   return (
     
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="#home"><img src={logo} className="logo-imagen"></img></Navbar.Brand>
+  <NavLink to='/'><img src={logo} className="logo-imagen"></img></NavLink>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link href="#hoodies">Hoodies</Nav.Link>
-      <Nav.Link href="#jackets">Jackets</Nav.Link>
-      <Nav.Link href="#sneakers">Sneakers</Nav.Link>
-      <Nav.Link href="#sneakers">Remeras</Nav.Link>
+      <NavLink to="categoria/hoodies" className="tituloCategoria">Hoodies</NavLink>
+      <NavLink to="categoria/jackets" className="tituloCategoria">Jackets</NavLink>
+      <NavLink to="categoria/sneakers" className="tituloCategoria">Sneakers</NavLink>
+      <NavLink to="categoria/remeras" className="tituloCategoria">Remeras</NavLink>
     </Nav>
     <Nav>
       <Nav.Link eventKey={2} href="#cart">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
-import { getFetchOne } from '../helpers/gFetch'
-import Item from '../components/Item'
+import { getFetch } from '../helpers/gFetch'
+import ItemDetail from '../components/ItemDetail'
 
 
 const ItemDetailContainer = () => {
@@ -9,14 +9,14 @@ const ItemDetailContainer = () => {
     const {detalleId} = useParams()
 
     useEffect(()=>{
-             getFetchOne
-            .then(producto=>setProducto(producto))
+             getFetch
+            .then(resp=>setProducto(resp.find((item)=>item.id===Number(detalleId))))
             .catch(err=>console.log(err))
     },[])
 
 
   return (
-    <div><Item Detail producto={producto}/></div>
+    <div><ItemDetail producto={producto}/></div>
   )
 }
 

@@ -10,12 +10,12 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = () => {
   const [loading, setLoading] = useState(true)
   const [productos, setProductos] = useState([])
-  const {id} = useParams
+  const {id} = useParams()
 
   useEffect(()=>{
     if(id){
       getFetch
-      .then(resp => setProductos(resp.filter(prod=>prod.categoria === id)))
+      .then(resp => setProductos(resp.filter(producto=>producto.categoria === id)))
       .catch(err=> console.log(err))
       .finally(()=>setLoading(false))
     }
