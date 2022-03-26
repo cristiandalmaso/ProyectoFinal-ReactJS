@@ -14,9 +14,14 @@ const ItemDetailContainer = () => {
             .catch(err=>console.log(err))
     },[])
 
+  const onAdd = (cant) => {
+      console.log(cant)
+  }
 
   return (
+    <>
     <div><ItemDetail producto={producto}/></div>
+    </>
   )
 }
 

@@ -50,3 +50,23 @@ button{
     margin-bottom: 0.5rem;
     font-family: 'Kanit', sans-serif;
 }
+
+.itemImg{
+    height: auto;
+    width: 40%;;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+}
+
+.buttonDetalle{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 0.25rem;
+}
+
+.buttonFinal{
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    border-radius: 0.25rem;
+}
+

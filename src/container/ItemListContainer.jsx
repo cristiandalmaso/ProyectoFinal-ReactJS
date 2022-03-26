@@ -5,6 +5,8 @@ import { getFetch } from "../helpers/gFetch.js";
 import ItemList from "../components/ItemList";
 import estilosBody from "../css/estilosBody.css"
 import { useParams } from "react-router-dom";
+import ItemCount from "../components/ItemCount.jsx";
+
 
 
 const ItemListContainer = () => {
@@ -27,15 +29,16 @@ const ItemListContainer = () => {
     }
   },[id])
 
-
   console.log(productos)
   return (
+    <>
     <div className="itemListContainer">
         {       loading ? <div>Cargando...</div> 
             :
                 <ItemList productos={productos} />
         }
-    </div>
+    </div>  
+    </>
 )
 
 };
