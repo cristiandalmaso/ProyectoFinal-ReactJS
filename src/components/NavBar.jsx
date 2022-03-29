@@ -23,9 +23,9 @@ function NavBar() {
       <NavLink to="categoria/remeras" className="tituloCategoria">Remeras</NavLink>
     </Nav>
     <Nav>
-      <Nav.Link eventKey={2} href="#cart">
+      <NavLink eventKey={2} to="cart">
       <CartWidget/>
-      </Nav.Link>
+      </NavLink>
     </Nav>
   </Navbar.Collapse>
   </Container>

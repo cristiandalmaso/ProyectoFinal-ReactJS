@@ -18,13 +18,17 @@ const ItemCount = ({ initial, stock, onAdd }) => {
         }
     }
 
-    console.log(count)
+    const agregar = () => {
+        onAdd( count )
+    }
+
 
     return (
         <div>
             <Button onClick={restar} className="buttonDetalle" variant="danger"> - </Button>
             <label> { count } </label>
             <Button onClick={sumar} className="buttonDetalle" variant="success"> + </Button>
+            <Button className="buttonFinal" variant="dark" onClick={agregar}>Agregar al carrito</Button>
         </div>
     )
 }
