@@ -25,7 +25,7 @@ function CartContextProvider ({children}) {
       cartList,
       //Funciones abajo
       addToCart,
-      vaciarCarrito
+      vaciarCarrito,
     }}>
       {children}
     </CartContext.Provider>

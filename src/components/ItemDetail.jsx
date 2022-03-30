@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import ItemCount from './ItemCount'
 import estilosBody from "../css/estilosBody.css"
-import Intercambiabilidad from './Intercambiabilidad'
 import { useCartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/esm/Button'
+
 
 
 const ItemDetail = ({producto}) => {
@@ -32,14 +33,14 @@ const ItemDetail = ({producto}) => {
         {isCant?
         <>  
         <Link to='/'>
-            <button className='btn btn-outline-primary'>Seguir comprando</button>
+            <Button className="buttonDetalle" variant="dark">Seguir comprando</Button>
 
         </Link>
         <Link to='/cart'>
-            <button className='btn btn-outline-success'>Ir a Cart</button>
+            <Button className="buttonDetalle" variant="success">Ir al Carrito</Button>
         </Link>
-    </>
-    :
+        </>
+        :
 
 
         <ItemCount initial={1} stock={10}  onAdd= { onAdd  }/>}

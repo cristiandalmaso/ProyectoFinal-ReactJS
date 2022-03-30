@@ -35,6 +35,11 @@
 
 a{
     text-decoration: none;
+    color: whitesmoke;
+}
+
+a:hover{
+    color:rgb(250, 116, 62)
 }
 
 .card-text{
@@ -69,4 +74,22 @@ button{
     margin-right: 0.25rem;
     border-radius: 0.25rem;
 }
+
+.listaCart{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    border: 1px solid black;
+    margin: 1rem;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}
+
+
+.cartImagen{
+    width: 50%;
+}
+
+
 
