@@ -7,7 +7,6 @@ import estilosBody from "../css/estilosBody.css"
 
 
 const Item = ({producto}) => {
-  console.log(producto)
   return (
     <Link to={`detalle/${producto.id}`} >
     <div className="item-individual">

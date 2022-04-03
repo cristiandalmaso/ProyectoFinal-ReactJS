@@ -18,7 +18,7 @@ const ItemDetail = ({producto}) => {
   const {addToCart} = useCartContext()
 
   const onAdd = (cant) => {
-    console.log(cant)
+    
      addToCart({...producto, cantidad: cant}) 
      setIsCant(true)
   }
@@ -41,9 +41,10 @@ const ItemDetail = ({producto}) => {
         </Link>
         </>
         :
-
-
-        <ItemCount initial={1} stock={10}  onAdd= { onAdd  }/>}
+        <>
+        <ItemCount initial={1} stock={10}  onAdd= { onAdd  }/>
+        </>
+        }
         
     </div>
   )
