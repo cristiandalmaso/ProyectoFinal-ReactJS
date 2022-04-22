@@ -2,6 +2,7 @@ import {useState} from 'react'
 import ItemListContainer from '../container/ItemListContainer'
 import estilosBody from '../css/estilosBody.css'
 import  Button  from "react-bootstrap/Button";
+import React from "react";
 
 const ItemCount = ({ initial, stock, onAdd }) => {
     const [ count, setCount ] = useState(initial)

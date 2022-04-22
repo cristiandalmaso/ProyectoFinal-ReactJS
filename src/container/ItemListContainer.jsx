@@ -6,15 +6,15 @@ import ItemList from "../components/ItemList";
 import estilosBody from "../css/estilosBody.css"
 import { useParams } from "react-router-dom";
 import ItemCount from "../components/ItemCount.jsx";
-
-
+import {collection, doc, getDoc, getDocs, getFirestore, orderBy, query, where} from 'firebase/firestore'
 
 const ItemListContainer = () => {
   const [loading, setLoading] = useState(true)
   const [productos, setProductos] = useState([])
+  const [prod,setProd] = useState({})
   const {id} = useParams()
 
-  useEffect(()=>{
+  /* useEffect(()=>{
     if(id){
       getFetch
       .then(resp => setProductos(resp.filter(producto=>producto.categoria === id)))
@@ -29,7 +29,31 @@ const ItemListContainer = () => {
     }
   },[id])
 
-  console.log(productos)
+  console.log(productos) */
+
+  useEffect(()=>{
+    const db = getFirestore();
+    /* Esta funcion apunta a la colección */
+    /* Collection es una funcion que recibe 2 parametros */
+    /* Una la base de datos y otra el nombre de la coleccion */
+    const queryCollection = !id ? 
+    collection(db,'items')
+    : 
+    query( collection(db, 'items' ), 
+                                    where('categoria','==', id)                  
+                                )     
+    /* const queryFilter = query(queryCollection,
+      where('categoria','==', 'hoodies')
+      ) */ 
+    
+    getDocs(queryCollection)
+    /* resp.docs.map porque tengo que mapear cada uno de los productos del array*/
+    /* producto.data devuelve los campos */
+    .then(resp=>setProductos(resp.docs.map(producto=>({id:producto.id,...producto.data()}))))
+    .catch(err=> console.log(err))
+    .finally(()=>setLoading(false))
+  },[id])
+    
   return (
     <>
     <div className="itemListContainer">
