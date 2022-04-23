@@ -1,6 +1,4 @@
 import {useState} from 'react'
-import ItemListContainer from '../container/ItemListContainer'
-import estilosBody from '../css/estilosBody.css'
 import  Button  from "react-bootstrap/Button";
 import React from "react";
 
@@ -21,14 +19,13 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     const agregar = () => {
         onAdd( count )
     }
-
-
+    
     return (
         <div>
             <Button onClick={restar} className="buttonDetalle" variant="danger"> - </Button>
             <label> { count } </label>
             <Button onClick={sumar} className="buttonDetalle" variant="success"> + </Button><br/>
-            <Button className="buttonFinal" variant="dark" onClick={agregar}>Agregar al carrito</Button>
+            <Button className="buttonFinal" variant="dark" onClick={agregar} >Agregar al carrito</Button>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { faAlignCenter, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useCartContext } from '../context/CartContext';
 

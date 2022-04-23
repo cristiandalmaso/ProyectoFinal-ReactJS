@@ -95,7 +95,6 @@ button{
     font-weight: bold;
 }
 
-
 .cartImagen{
     width: 50%;
 }
@@ -105,6 +104,7 @@ button{
     font-weight: bold;
     margin-top: -1rem;
     margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
 .deleteItem{
@@ -133,6 +133,50 @@ button{
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
+
+.formularioCompra{
+    padding-top: 1rem;
+    border: 1px solid black;
+    font-family: 'Kanit', sans-serif;
+    background-color: #262626;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: whitesmoke
+}
+
+.inputFormulario{
+    margin-top: 1rem;
+    width: 70%;
+    border-radius: 0.25rem;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+}
+
+.buttonConfirmarOrden{
+    margin-top: 1rem;
+}
+
+footer{
+    height: 1.5rem;
+    background-color: #262626;
+    font-family: 'Kanit', sans-serif;
+    color: whitesmoke;
+    text-align: right;
+}
+
+.containerFooter{
+    margin-right: 1rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.far{
+    margin-left: 0.5rem;
+}
+
+
 
 
 

@@ -3,9 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import  Button  from "react-bootstrap/Button";
 import  Card  from "react-bootstrap/Card";
 import { Link } from 'react-router-dom';
-import estilosBody from "../css/estilosBody.css"
 
 const Item = ({producto}) => {
+  
   return (
     <Link to={`../detalle/${producto.id}`} > {/* MODIFICADO */}
     <div className="item-individual">

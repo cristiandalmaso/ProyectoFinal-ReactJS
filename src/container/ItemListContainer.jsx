@@ -1,12 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {useState,useEffect} from 'react'
-import { getFetch } from "../helpers/gFetch.js";
 import ItemList from "../components/ItemList";
 import estilosBody from "../css/estilosBody.css"
 import { useParams } from "react-router-dom";
-import ItemCount from "../components/ItemCount.jsx";
-import {collection, doc, getDoc, getDocs, getFirestore, orderBy, query, where} from 'firebase/firestore'
+import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore'
 
 const ItemListContainer = () => {
   const [loading, setLoading] = useState(true)
@@ -39,13 +37,13 @@ const ItemListContainer = () => {
     const queryCollection = !id ? 
     collection(db,'items')
     : 
-    query( collection(db, 'items' ), 
+    query( collection(db, 'items'), 
                                     where('categoria','==', id)                  
                                 )     
     /* const queryFilter = query(queryCollection,
       where('categoria','==', 'hoodies')
-      ) */ 
-    
+      ) */   
+
     getDocs(queryCollection)
     /* resp.docs.map porque tengo que mapear cada uno de los productos del array*/
     /* producto.data devuelve los campos */
